@@ -20,10 +20,17 @@ with open('animal.csv', 'rb') as csvfile:
         ################################################
         # Your Code Here!
 
-        
+        # Answer
+
+        # if not isExist(animal):
+        #     result[animal] = []
+        # result[animal].append(name)
+
+        # Shorter...
+        result[animal] = result[animal] + [name] if isExist(animal) else [name]
+
         # print("{} -> {} -> {}".format(name, weight, animal))
-
-
+        
 print("Result")
 print(json.dumps(result, indent=4, sort_keys=True))
 
